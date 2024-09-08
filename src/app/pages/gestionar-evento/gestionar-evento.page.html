@@ -1,20 +1,80 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/inicio"
-      text=""
-      color="dark">
-
-      </ion-back-button>
+      <ion-back-button defaultHref="/inicio" text="" color="dark"></ion-back-button>
     </ion-buttons>
-    <ion-title>gestionar_evento</ion-title>
+    <ion-title>Editar Evento</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">gestionar_evento</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>Editar Evento</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      
+      <!-- Nombre del Evento -->
+      <ion-item>
+        <ion-label position="stacked">Nombre del Evento:</ion-label>
+        <ion-input placeholder="Introduce el nombre del evento"></ion-input>
+      </ion-item>
+
+      <!-- Hora del Evento -->
+      <ion-item>
+        <ion-label position="stacked">Hora del Evento:</ion-label>
+        <ion-input type="text" placeholder="Introduce la hora del evento"></ion-input>
+      </ion-item>
+
+      <!-- Cantidad de Cupos -->
+      <ion-item>
+        <ion-label position="stacked">Cupos:</ion-label>
+        <ion-input type="number" placeholder="Introduce el número de cupos"></ion-input>
+      </ion-item>
+
+      <!-- Botón para Cambiar Imagen -->
+      <ion-item>
+        <ion-label position="stacked">Cambiar Imagen</ion-label>
+        <ion-button expand="block" fill="solid">
+          <ion-icon name="image-outline"></ion-icon>
+          Seleccionar Imagen
+        </ion-button>
+      </ion-item>
+
+    </ion-card-content>
+
+    <div style="text-align: center; padding: 10px;">
+      <ion-button shape="round" color="primary">
+        Guardar Cambios
+      </ion-button>
+      <ion-button shape="round" color="medium" (click)="Rinicio()">
+        Cancelar
+      </ion-button >
+    </div>
+
+  </ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title>Organizador</ion-title>
+
+    <ion-buttons slot="start">
+      
+      <ion-button fill="clear">
+        <ion-icon name="logo-instagram"></ion-icon>
+        Instagram
+      </ion-button>
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-github"></ion-icon>
+        Github
+      </ion-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-footer>
+

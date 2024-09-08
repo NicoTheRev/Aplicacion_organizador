@@ -1,13 +1,93 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!--<ion-list>
-    <ion-item *ngFor="">
-      <ion-label>Awesome Label</ion-label>
+
+  <!-- Tarjeta 1 -->
+  <ion-card size="large">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/futbol.webp" alt="Evento 1">
+      </ion-avatar>
+      <ion-label>
+        <h2>Torneo de futbol</h2>
+        <p>7:00 PM</p>
+      </ion-label>
+      <ion-button (click)="Rgestionar()" fill="solid" slot="end">Gestionar</ion-button>
+      <ion-button fill="solid" shape="round" color="danger" (click)="mostrarMensaje()">
+        <ion-icon name="trash-outline"  color="dark"></ion-icon>
+      </ion-button>
     </ion-item>
-  </ion-list>-->
+  </ion-card>
+
+  <!-- Tarjeta 2 -->
+  <ion-card size="large">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/concierto.webp" alt="Evento 2">
+      </ion-avatar>
+      <ion-label>
+        <h2>Concierto a puertas abiertas</h2>
+        <p>2:00 PM</p>
+      </ion-label>
+      <ion-button fill="solid" slot="end" (click)="Rgestionar()">Gestionar</ion-button>
+      <ion-button fill="solid" shape="round" color="danger" (click)="mostrarMensaje()">
+        <ion-icon name="trash-outline"  color="dark"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-card>
+
+  <!-- Tarjeta 3 -->
+  <ion-card size="large">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/tuerca.jpg" alt="Evento 3">
+      </ion-avatar>
+      <ion-label>
+        <h2>Expo taller</h2>
+        <p>4:00 PM</p>
+      </ion-label>
+      <ion-button fill="solid" slot="end" (click)="Rgestionar()">Gestionar</ion-button>
+      <ion-button fill="solid" shape="round" color="danger" (click)="mostrarMensaje()" >
+        <ion-icon name="trash-outline"  color="dark"></ion-icon>
+      </ion-button>
+      
+    </ion-item>
+  </ion-card>
+
+  <div>
+      <img src="assets/logo.png" style="height: 400px; width: 400px;">
+  </div>    
+    
+  
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title>Organizador</ion-title>
+
+    <ion-buttons slot="start">
+      
+      <ion-button fill="clear">
+        <ion-icon name="logo-instagram"></ion-icon>
+        Instagram
+      </ion-button>
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-github"></ion-icon>
+        Github
+      </ion-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-footer>
+
